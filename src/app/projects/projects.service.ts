@@ -25,10 +25,12 @@ export class ProjectsService {
   }
 
   getStarredProjects(): Observable<any[]> {
+    /*
     const getStarredUrl = 'https://gh-pinned-repos.now.sh/?username=augustbredberg'
     console.log("getStarredUrl")
     console.log(getStarredUrl)
     return this.http.get<any[]>(getStarredUrl)
+    */
     //const getStarredUrl = ''
     return new Observable //this.http.get<any[]>(getStarredUrl)
   }
