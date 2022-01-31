@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 animated bounceInLeft">
+      <div class="">
+        <h1 class="yellow-theme-text text-darken-3"><b>Contact</b></h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <a
+      *ngFor="let contact of contacts; let i = index"
+      href="{{ contact.href }}"
+      target="_blank"
+      class="
+        card-link
+        col
+        offset-s1
+        s10
+        m5
+        offset-m1
+        l3
+        offset-l1
+        animated
+        zoomIn
+        faster
+      "
+    >
+      <div class="card-panel secondary-color lighten-5">
+        <i
+          class="fa fa-{{ contact.icon }} fa-3x yellow-theme-text text-darken-3"
+          aria-hidden="true"
+        >
+        </i>
+        <p
+          class="center-align flow-text yellow-theme-text text-darken-3 truncate"
+        >
+          {{ contact.name }}
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
