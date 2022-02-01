@@ -11,6 +11,14 @@ export class AboutService {
       'https://www.saljpoolen.se/sv',
     ),
   ]
+  worksWilliam: InfoField[] = [
+    new InfoField(
+      '',
+      '',
+      '',
+      '',
+    ),
+  ]
 
   educationWilliam: InfoField[] = [
     new InfoField(
@@ -18,6 +26,14 @@ export class AboutService {
       'Campus La Salle',
       'Oct. 2018 - July 2019',
       'https://www.salleurl.edu/ca/estudis/master-en-desenvolupament-avancat-de-videojocs',
+    ),
+  ]
+  educationAlyson: InfoField[] = [
+    new InfoField(
+      "Bachelor of Science Program, Chemistry",
+      'Lunds Tekniska Högskola',
+      'Aug 2021 -',
+      '',
     ),
   ]
   educationAugust: InfoField[] = [
@@ -39,6 +55,9 @@ export class AboutService {
     new InfoField('Swedish', 'Bilingual or native competence', ' ', ' '),
     new InfoField('English', 'Bilingual or native competence', ' ', ' '),
   ]
+  languagesWilliam: InfoField[] = [
+    new InfoField('', '', ' ', ' '),
+  ]
 
   getEducation(firstName): InfoField[] {
     switch(firstName){
@@ -49,13 +68,13 @@ export class AboutService {
         return this.educationWilliam
       }
       case "Alyson": {
-        return this.educationAugust
+        return this.educationAlyson
       }
       case "Zacharias": {
-        return this.educationAugust
+        return this.educationWilliam
       }
       default: {
-        return this.educationAugust
+        return this.educationWilliam
       }
     }
   }
@@ -66,16 +85,16 @@ export class AboutService {
         return this.worksAugust
       }
       case "William": {
-        return this.worksAugust
+        return this.worksWilliam
       }
       case "Alyson": {
-        return this.worksAugust
+        return this.worksWilliam
       }
       case "Zacharias": {
-        return this.worksAugust
+        return this.worksWilliam
       }
       default: {
-        return this.worksAugust
+        return this.worksWilliam
       }
     }
   }
@@ -86,16 +105,16 @@ export class AboutService {
         return this.languagesAugust
       }
       case "William": {
-        return this.languagesAugust
+        return this.languagesWilliam
       }
       case "Alyson": {
-        return this.languagesAugust
+        return this.languagesWilliam
       }
       case "Zacharias": {
-        return this.languagesAugust
+        return this.languagesWilliam
       }
       default: {
-        return this.languagesAugust
+        return this.languagesWilliam
       }
     }
   }
