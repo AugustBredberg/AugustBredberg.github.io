@@ -30,16 +30,35 @@ nav ul li.active a {
   box-shadow: inset 0 -5px 0 var(--color-primary);
 }
 nav ul li a:hover {
-  background-color: transparent !important;
+  background-color: white !important;
 }
 #navbar {
-  background: var(--color-secondary);
+  background: var(--color-secondary); 
+  background: var(--color-secondary); 
+
 }
 .side-nav {
   background-color: var(--color-secondary);
+  color:  var(--color-primary);
   width: 15rem;
 }
-.side-nav li {
+.side-nav li {  
   text-align: center;
   margin: 1rem 0;
+  color:  var(--color-primary);
+}
+.side-nav li > a{
+  
+  color:  var(--color-primary);
+}
+ul li.active a {
+  box-shadow: inset 0 -10px 0 var(--color-pure-white);
+}
+
+.home-btn{
+  padding-left: 2em;
+  transform: scale(2);
+}
+#a{
+  color:  var(--color-primary);
 }

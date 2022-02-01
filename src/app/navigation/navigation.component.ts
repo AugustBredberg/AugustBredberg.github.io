@@ -21,6 +21,7 @@ export class NavigationComponent {
         this.route = this.home
       }
       this.currentPerson = this.route.split("/").pop();
+      console.log(this.route)
     })
   }
   

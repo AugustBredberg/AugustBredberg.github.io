@@ -107,6 +107,9 @@ li {
   display: block;
 }
 
+img{
+  background-color: black;
+}
 .cover {
   position: absolute;
   top: 0; right: 0;

@@ -1,4 +1,4 @@
-# David Gimeno's personal website
+# August Bredberg's personal website
 
 ## 🚀 Live version 
 

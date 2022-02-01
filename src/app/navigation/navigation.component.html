@@ -1,9 +1,11 @@
 <div *ngIf="route !== '/'" class="navbar-fixed">
   <nav class="z-depth-0 white animated slideInDown delay-1s">
     <div id="navbar" class="nav-wrapper">
-      <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-      <a routerLink="/" class="brand-logo" aria-hidden="false" aria-label="test">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+      <a routerLink="/" class="sidenav-trigger button-collapse right hide-on-large-only">
+        <i class="material-icons yellow-theme-text text-darken-3">home</i>
+      </a>
+      <a routerLink="/" class="home-btn sidenav-trigger left hide-on-med-and-down">
+        <i class="material-icons yellow-theme-text text-darken-3">home</i>
       </a>
       <a
         materialize="sideNav"
@@ -35,28 +37,28 @@
     </div>
   </nav>
 </div>
-<ul class="side-nav" id="mobile-version">
-  <li class="sidenav-close" [ngClass]="route === '/about' ? 'active' : ''">
+<ul class="side-nav yellow-theme-text" id="mobile-version">
+  <li class="sidenav-close yellow-theme-text" [ngClass]="route.includes('about') ? 'active ' : ' '">
     <a
       href="#!"
       class="yellow-theme-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/about"
+      [routerLink]="['/about', currentPerson]"
       >/About</a
     >
   </li>
-  <li class="sidenav-close" [ngClass]="route === '/projects' ? 'active' : ' '">
+  <li class="sidenav-close yellow-theme-text" [ngClass]="route.includes('projects') ? 'active' : ' '">
     <a
       href="#!"
       class="yellow-theme-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/projects"
+      [routerLink]="['/projects', currentPerson]"
       >/Projects</a
     >
   </li>
-  <li class="sidenav-close" [ngClass]="route === '/contact' ? 'active' : ' '">
+  <li class="sidenav-close yellow-theme-text" [ngClass]="route.includes('contact') ? 'active' : ' '">
     <a
       href="#!"
       class="yellow-theme-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/contact"
+      [routerLink]="['/contact', currentPerson]"
       >/Contact
     </a>
   </li>
