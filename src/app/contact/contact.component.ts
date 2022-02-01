@@ -71,7 +71,7 @@ export class ContactComponent {
   contactsAugust = [
     new Contact(
       '/august-bredberg',
-      'https://www.linkedin.com/in/august-bredberg-1028b0209/',
+      'https://www.linkedin.com/in/august-bredberg/',
       'linkedin',
       'linkedin',
     ),
@@ -101,7 +101,7 @@ export class ContactComponent {
   contactsAlyson = [
     new Contact(
       '/august-bredberg',
-      'https://www.linkedin.com/in/august-bredberg-1028b0209/',
+      'https://www.linkedin.com/in/august-bredberg/',
       'linkedin',
       'linkedin',
     ),
