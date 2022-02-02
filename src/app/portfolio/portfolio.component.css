@@ -1,0 +1,11 @@
+
+.portfolioItem{
+    background-color: var(--color-pure-white);
+    display: flex;
+    flex-direction:row;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+  }

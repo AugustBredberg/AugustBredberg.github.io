@@ -16,6 +16,7 @@ export class AboutComponent implements OnInit {
   private routeSub: Subscription;
   private aboutService: AboutService;
   firstName: string
+  welcomeMessage: string
   works: InfoField[]
   education: InfoField[]
   languages: InfoField[]
@@ -44,7 +45,7 @@ export class AboutComponent implements OnInit {
       this.education = this.aboutService.getEducation(this.firstName)
       this.works = this.aboutService.getWorks(this.firstName)
       this.languages = this.aboutService.getLanguages(this.firstName)
-
+      this.welcomeMessage = this.getWelcomeMessage();
       // Checks if the URL ends with 'August' || 'William' || 'Alyson'
       // if it doesn't, navigate to home
       var urlEnding = this.router.url.split('/').pop();
@@ -112,5 +113,39 @@ export class AboutComponent implements OnInit {
     }
   }
 
+  
+  getWelcomeMessage(): string {
+    var now: Date = new Date();
+    var thisHour = 17 //now.getHours();
+    // 04 - 09:00 -- Good morning! Happy to see someone here this early!
+    // 09:00 - 11:30 -- Good Morning!
+    // 11:30 - 13:00 -- Hello there, good day!
+    // 13:00 - 17:00 -- Good afternoon, hope you've had a good day thus far!
+    // 17:00 - 22:00 -- Good evening, have you had a good day?
+    // 22:00 - 04:00 -- Fun to see someone here this late! Welcome!
+    switch(true){
+      case 4 <= thisHour && thisHour < 9 : {
+        return "Good morning! Happy to see someone here this early!"
+      }
+      case 9 <= thisHour && thisHour < 11: {
+        return "Good Morning!"
+      }
+      case 11 <= thisHour && thisHour < 13: {
+        return "Hello there, good day!"
+      }
+      case 13 <= thisHour && thisHour < 17: {
+        return "Good afternoon, hope you've had a good day thus far!"
+      }
+      case 17 <= thisHour && thisHour < 22: {
+        return "Good evening, have you had a good day?"
+      }
+      case 22 <= thisHour || thisHour < 4: {
+        return "Fun to see someone here this late! Welcome!"
+      }
+      default: {
+        return "Hello there! Welcome!"
+      }
+    }
+  }
 
 }

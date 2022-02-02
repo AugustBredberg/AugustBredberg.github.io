@@ -10,13 +10,13 @@ export class HomeComponent {
 
   constructor(
   ) {
-    if(window.innerWidth < 768){
+    if(window.innerWidth < window.innerHeight){
       this.isMobile = true;
     }
     console.log(this.isMobile)
   }
   ngOnInit(): void {
-    if(window.innerWidth < 768){
+    if(window.innerWidth < window.innerHeight){
       this.isMobile = true;
     }
     console.log("is mobile:")

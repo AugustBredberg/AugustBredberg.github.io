@@ -4,6 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { HttpErrorInterceptor } from './http-error.interceptor'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
+
 import { AppComponent } from './app.component'
 import { RouterModule, Routes } from '@angular/router'
 import { MaterializeModule } from 'angular2-materialize'
@@ -14,6 +15,7 @@ import { ContactComponent } from './contact/contact.component'
 import { AboutComponent} from './about/about.component'
 import { FooterComponent } from './footer/footer.component'
 import { HomeComponent } from './home/home.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 // TODO: routing working in production
 // https://angular.io/api/common/PathLocationStrategy
@@ -30,6 +32,11 @@ const appRoutes: Routes = [
     data: { title: 'About me' },
   },
   {
+    path: 'portfolio/:firstname',
+    component: PortfolioComponent,
+    data: { title: 'Contact' },
+  },
+  {
     path: 'projects/:firstname',
     component: ProjectsComponent,
     data: { title: 'Projects' },
@@ -39,6 +46,7 @@ const appRoutes: Routes = [
     component: ContactComponent,
     data: { title: 'Contact' },
   },
+  
   {
     path: '**', 
     redirectTo: '',
@@ -56,6 +64,7 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     AboutComponent,
+    PortfolioComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { enableTracing: false }),

@@ -23,6 +23,11 @@
             >/About</a
           >
         </li>
+        <li *ngIf="currentPerson === 'August'" [ngClass]="route.includes('portfolio') ? 'active' : ' '">
+          <a class="yellow-theme-text text-darken-3" [routerLink]="['/portfolio', currentPerson]"
+            >/Portfolio</a
+          >
+        </li>
         <li [ngClass]="route.includes('projects') ? 'active' : ' '">
           <a class="yellow-theme-text text-darken-3" [routerLink]="['/projects', currentPerson]"
             >/Projects</a
@@ -44,6 +49,14 @@
       class="yellow-theme-text text-darken-3 waves-effect sidenav-close"
       [routerLink]="['/about', currentPerson]"
       >/About</a
+    >
+  </li>
+  <li *ngIf="currentPerson === 'August'" class="sidenav-close yellow-theme-text" [ngClass]="route.includes('portfolio') ? 'active' : ' '">
+    <a
+      href="#!"
+      class="yellow-theme-text text-darken-3 waves-effect sidenav-close"
+      [routerLink]="['/portfolio', currentPerson]"
+      >/Portfolio</a
     >
   </li>
   <li class="sidenav-close yellow-theme-text" [ngClass]="route.includes('projects') ? 'active' : ' '">

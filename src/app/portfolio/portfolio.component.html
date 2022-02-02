@@ -1,0 +1,27 @@
+
+
+<div class="centered">
+
+    <!---------------------------------------------------------------------
+            UNWATCHD
+    ---------------------------------------------------------------------->
+    <div class="portfolioItem">
+        <div class="LHside-text">
+            test
+        </div>
+        <div class="RHside-images">
+            <mat-grid-list cols="4" rowHeight="100px">
+                <mat-grid-tile
+                    *ngFor="let tile of tiles"
+                    [colspan]="tile.cols"
+                    [rowspan]="tile.rows"
+                    [style.background]="tile.color">
+                    
+                    <img style="width:20%, height:20%"src="assets/portfolioAugust/logoRED.png">
+                    <img src="assets/portfolioAugust/movieView.jpg">
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+
+</div>
