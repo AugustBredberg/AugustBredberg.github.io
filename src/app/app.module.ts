@@ -4,6 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { HttpErrorInterceptor } from './http-error.interceptor'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component'
 import { RouterModule, Routes } from '@angular/router'
@@ -72,6 +73,7 @@ const appRoutes: Routes = [
     MaterializeModule,
     HttpClientModule,
     MatGridListModule,
+    MatCardModule,
   ],
   providers: [
     {

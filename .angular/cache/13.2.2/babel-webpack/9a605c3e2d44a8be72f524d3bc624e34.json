@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class InfoField {\n  constructor(field_1, field_2, field_3, href) {\n    this.field_1 = field_1;\n    this.field_2 = field_2;\n    this.field_3 = field_3;\n    this.href = href;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
