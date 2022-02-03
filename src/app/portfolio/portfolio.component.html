@@ -8,20 +8,41 @@
     <div class="portfolioItem">
         <div class="LHside-text">
             test
+            <mat-card class="mat-elevation-z8" >
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                </mat-card-content>
+              </mat-card>
         </div>
         <div class="RHside-images">
-            <mat-grid-list cols="4" rowHeight="100px">
-                <mat-grid-tile
-                    *ngFor="let tile of tiles"
-                    [colspan]="tile.cols"
-                    [rowspan]="tile.rows"
-                    [style.background]="tile.color">
+            <mat-grid-list  cols="4" >
+                <mat-grid-tile  [colspan]="1" [rowspan]="1">
                     
-                    <img style="width:20%, height:20%"src="assets/portfolioAugust/logoRED.png">
-                    <img src="assets/portfolioAugust/movieView.jpg">
                 </mat-grid-tile>
-            </mat-grid-list>
-        </div>
+                <mat-grid-tile [colspan]="1" [rowspan]="2" >
+                    <img mat-card-image
+                        src="assets/portfolioAugust/movieView.jpg"
+                        alt="david gimeno profile"
+                        class="responsive-img unwatchd-imgs"
+                    />
+                </mat-grid-tile>
+                <mat-grid-tile >
+                    <img mat-card-image
+                        src="assets/portfolioAugust/movieView.jpg"
+                        alt="david gimeno profile"
+                        class="responsive-img unwatchd-imgs"
+                    />
+                </mat-grid-tile>
+                <mat-grid-tile >
+                    <img mat-card-image
+                        src="assets/portfolioAugust/movieView.jpg"
+                        alt="david gimeno profile"
+                        class="responsive-img"
+                    />
+                </mat-grid-tile>
+              </mat-grid-list>
+              
+        </div> 
     </div>
 
 </div>

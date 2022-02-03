@@ -42,6 +42,7 @@
 span.badge.new {
   border-radius: 20px;
   padding: 0 0.5rem;
+  background-color: blue;
 }
 .tabs li a {
   font-weight: bold;

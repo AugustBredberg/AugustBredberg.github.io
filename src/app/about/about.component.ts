@@ -116,7 +116,7 @@ export class AboutComponent implements OnInit {
   
   getWelcomeMessage(): string {
     var now: Date = new Date();
-    var thisHour = 17 //now.getHours();
+    var thisHour = now.getHours();
     // 04 - 09:00 -- Good morning! Happy to see someone here this early!
     // 09:00 - 11:30 -- Good Morning!
     // 11:30 - 13:00 -- Hello there, good day!

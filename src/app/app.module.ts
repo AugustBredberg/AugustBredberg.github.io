@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { HttpErrorInterceptor } from './http-error.interceptor'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component'
 import { RouterModule, Routes } from '@angular/router'
@@ -71,6 +71,7 @@ const appRoutes: Routes = [
     BrowserModule,
     MaterializeModule,
     HttpClientModule,
+    MatGridListModule,
   ],
   providers: [
     {
