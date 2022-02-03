@@ -1,5 +1,5 @@
 {
-  "name": "dgm-website-angular",
+  "name": "bredberg-website-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.901.15",
-    "@angular/cli": "^11.2.13",
+    "@angular/cli": "^13.2.2",
     "@angular/compiler-cli": "^9.1.13",
     "@angular/language-service": "^9.1.13",
     "@fortawesome/fontawesome-free": "^5.15.3",
