@@ -17,6 +17,7 @@ export interface Tile {
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+  columnNumHeader = 2
   columnNum = 3
   firstName: string
   tabOption = 0
@@ -41,7 +42,9 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
     // If mobile, use 1 column
     if(window.innerWidth < window.innerHeight){
+      this.columnNumHeader = 1
       this.columnNum = 2
+      this.isMobile = true
     }
     this.routeSub = this.route.params.subscribe(params => {
       console.log(params) //log the entire params object

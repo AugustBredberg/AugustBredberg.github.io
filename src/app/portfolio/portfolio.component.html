@@ -6,17 +6,24 @@
             UNWATCHD
     ---------------------------------------------------------------------->
     <div class="wrapper">
-        <div class="header">
-
-        </div>
-
-
-        <div class="frame single popup_element visible">
-            <img src="assets/portfolioAugust/logoRED.png" class="img-unwatchd-logo img-shadow " />
-        </div>
-
         <div class="centered frame single">
+            <mat-grid-list class="grid-unwatchd" cols="{{columnNumHeader}}">
+                <mat-grid-tile  [colspan]="1" [rowspan]="1">
+                    <div class="centered visible" >
+                        <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/logoRED.png" class="img-shadow" />
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile  [colspan]="1" [rowspan]="1">
+                    <div class="centered visible" style="flex-direction: column;">
+                        <h5 class="white-text text-darken-3">A project with friends. My main responsibility during the project was to seamlessly integrate our server and the IMDB API with the mobile application, aswell as front-end design.</h5>
+                        <h5 class="white-text text-darken-3">Share your movie experiences and see what your friends are watching. Rate movies and search for highly rated movies, both IMDB-ratings and UnWatchd-ratings.
+                            The social media for sharing your movie experiences and keeping track of watched and un-watched films</h5>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
             <mat-grid-list class="grid-unwatchd" cols="{{columnNum}}">
+                
+
                 <mat-grid-tile  [colspan]="2" [rowspan]="1">
                     <div class="popup_element visible">
                         <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/neverLetAMovieGoUnwatchd.png" class="img-shadow" />
@@ -69,7 +76,7 @@
                             >
                             </div>
                         </span>
-                        <p class="project-description white-text flow-text">A cross-platform mobile app written in Flutter: Social media for rating, sharing and commenting on watched movies</p>
+                        <p class="project-description white-text flow-text">The code behind unWatched. This link leads to Github.com</p>
                         </div>
                     </a>
                 </mat-grid-tile>
