@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class Contact {\n  constructor(name, href, app, icon) {\n    this.name = name;\n    this.href = href;\n    this.app = app;\n    this.icon = icon;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

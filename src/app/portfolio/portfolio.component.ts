@@ -22,6 +22,8 @@ export class PortfolioComponent implements OnInit {
   firstName: string
   tabOption = 0
   isMobile = false
+  aboutUnwatchdColumns = 1
+  welcomeMessage: string
 
   private routeSub: Subscription;
   githubProjects: any[] = []
@@ -45,6 +47,7 @@ export class PortfolioComponent implements OnInit {
       this.columnNumHeader = 1
       this.columnNum = 2
       this.isMobile = true
+      this.aboutUnwatchdColumns = 2
     }
     this.routeSub = this.route.params.subscribe(params => {
       console.log(params) //log the entire params object
@@ -52,6 +55,7 @@ export class PortfolioComponent implements OnInit {
       this.firstName = params['firstname']
     })
 
+    this.welcomeMessage = this.getWelcomeMessage();
 
     this.getApiProjects().subscribe(
       (res) => (this.githubProjects = res),
@@ -83,6 +87,40 @@ export class PortfolioComponent implements OnInit {
         }
       }
       
+  }
+
+  getWelcomeMessage(): string {
+    var now: Date = new Date();
+    var thisHour = now.getHours();
+    // 04 - 09:00 -- Good morning! Happy to see someone here this early!
+    // 09:00 - 11:30 -- Good Morning!
+    // 11:30 - 13:00 -- Hello there, good day!
+    // 13:00 - 17:00 -- Good afternoon, hope you've had a good day thus far!
+    // 17:00 - 22:00 -- Good evening, have you had a good day?
+    // 22:00 - 04:00 -- Fun to see someone here this late! Welcome!
+    switch(true){
+      case 4 <= thisHour && thisHour < 9 : {
+        return "Good morning! Happy to see someone here this early!"
+      }
+      case 9 <= thisHour && thisHour < 11: {
+        return "Good Morning!"
+      }
+      case 11 <= thisHour && thisHour < 13: {
+        return "Hello there, good day!"
+      }
+      case 13 <= thisHour && thisHour < 17: {
+        return "Good afternoon, hope you've had a good day thus far!"
+      }
+      case 17 <= thisHour && thisHour < 22: {
+        return "Good evening, have you had a good day?"
+      }
+      case 22 <= thisHour || thisHour < 4: {
+        return "Fun to see someone here this late! Welcome!"
+      }
+      default: {
+        return "Hello there! Welcome!"
+      }
+    }
   }
 
 }

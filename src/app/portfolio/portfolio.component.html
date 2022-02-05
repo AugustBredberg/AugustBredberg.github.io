@@ -1,22 +1,55 @@
 
 
 <div class="centered">
+    <div class="wrapper">
+    <!---------------------------------------------------------------------
+            AUGUST
+    ---------------------------------------------------------------------->
+        <div class="centered frame single frame-august">
+            
+            <mat-grid-list cols="2" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" >
+                <mat-grid-tile  [colspan]="1" [rowspan]="2">
+                    <div class="centered visible" >
+                        <div class="col s12 animated bounceInLeft">
+                            <h1 class="yellow-theme-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.9em' : '2.7em' }"><b>{{firstName}} Bredberg</b></h1>
+                            <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.5em' : '2.3em' }">{{welcomeMessage}}</h5>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile  [colspan]="1" [rowspan]="1">
+                    <div class="centered visible" >
+                        <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/augustrosa.jpg" class="img-shadow" />
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile  [colspan]="1" [rowspan]="1">
+                    <div class="centered visible" >
+                        <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/augustotilda.jpg" class="img-shadow" />
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile  [colspan]="1" [rowspan]="2">
+                    <div class="centered visible" >
+                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/augustvinter.jpg" class="img-shadow" />
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+
+
 
     <!---------------------------------------------------------------------
             UNWATCHD
     ---------------------------------------------------------------------->
-    <div class="wrapper">
         <div class="centered frame single">
-            <mat-grid-list class="grid-unwatchd" cols="{{columnNumHeader}}">
+            <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" >
                 <mat-grid-tile  [colspan]="1" [rowspan]="1">
                     <div class="centered visible" >
                         <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/logoRED.png" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
-                <mat-grid-tile  [colspan]="1" [rowspan]="1">
+                <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
                     <div class="centered visible" style="flex-direction: column;">
-                        <h5 class="white-text text-darken-3">A project with friends. My main responsibility during the project was to seamlessly integrate our server and the IMDB API with the mobile application, aswell as front-end design.</h5>
-                        <h5 class="white-text text-darken-3">Share your movie experiences and see what your friends are watching. Rate movies and search for highly rated movies, both IMDB-ratings and UnWatchd-ratings.
+                        <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">A project with friends. My main responsibility during the project was to seamlessly integrate our server and the IMDB API with the mobile application, aswell as front-end design.</h5>
+                        <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">Share your movie experiences and see what your friends are watching. Rate movies and search for highly rated movies, both IMDB-ratings and UnWatchd-ratings.
                             The social media for sharing your movie experiences and keeping track of watched and un-watched films</h5>
                     </div>
                 </mat-grid-tile>
