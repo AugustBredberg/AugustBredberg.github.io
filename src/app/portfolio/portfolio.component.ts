@@ -63,6 +63,9 @@ export class PortfolioComponent implements OnInit {
     )
   }
 
+  scroll(el: HTMLElement) {
+    el.scrollIntoView( {behavior: 'smooth'});
+  }
   getApiProjects(): Observable<any[]> {
     var getProjectsUrl =
       'https://api.github.com/users/augustbredberg/repos?sort=pushed'

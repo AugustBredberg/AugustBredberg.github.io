@@ -6,45 +6,42 @@
             AUGUST
     ---------------------------------------------------------------------->
         <div class="centered frame single frame-august">
-            <div class="centered visible" >
-                <div class="col s12 animated bounceInLeft">
-                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.2em' : '1.9em' }">{{welcomeMessage}} My name is</h5>
-                 
-                       
-                    <h1 class="yellow-theme-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.9em' : '2.7em' }"><b>{{firstName}} Bredberg</b></h1>
-                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.2em' : '1.9em' }">Welcome to my portfolio!</h5>
-                       
+            
+            <div class="col s12 animated bounceInLeft" style="text-align: center;">
+                <h1 class="yellow-theme-text text-darken-3"><b>{{firstName}} Bredberg</b></h1>
+                <h5 class="white-text text-darken-3">Software engineer and full-stack developer </h5>
+            </div>
+            <a
+                style="max-width: 80%; max-height: 20%; height: 5%;"
+                class="card animated zoomIn faster col s10 offset-s1 m5 l5"
+                [routerLink]="['/about', firstName]"
+                >
+                <div class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3" style="height: 5%;">
+                    <span class="card-title">
+                        <div class="card-title-content" style="height: 5%;">
+                            <h5 class="project-title">About me</h5>
+                        </div>
+                    </span>
+                </div>
+            </a>
+            <button class="toPortfolioButton" (click)="scroll(unwatchd)">
+            <div class="col" style="bottom: 5rem;">
+                <div class="row toPortfolio">
+                    <h5 class="white-text text-darken-3">To my portfolio</h5>
+                </div>
+                <div class="row downarrow visible centered" >
+                    <img class="downarrow" src="assets/portfolioAugust/arrowdown2.gif"  />
                 </div>
             </div>
-
-
-            <mat-grid-list cols="4" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" >
-                
-                <mat-grid-tile  [colspan]="1" [rowspan]="1">
-                    <div class="centered visible" >
-                        <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/arrowdown.gif" class="img-shadow" />
-                    </div>
-                </mat-grid-tile>
-                <mat-grid-tile  [colspan]="1" [rowspan]="2">
-                    <div class="centered visible" >
-                        <img style="max-width: 100%; height: auto;" src="assets/portfolioAugust/augusthund.GIF" class="img-shadow" />
-                    </div>
-                </mat-grid-tile>
-                <mat-grid-tile  [colspan]="1" [rowspan]="1">
-                    <div class="centered visible" >
-                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/augustcake.GIF" class="img-shadow" />
-                    </div>
-                </mat-grid-tile>
-            </mat-grid-list>
+        </button>
         </div>
-
 
 
     <!---------------------------------------------------------------------
             UNWATCHD
     ---------------------------------------------------------------------->
-        <div class="centered frame single">
-            <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" >
+        <div class="centered frame single" #unwatchd>
+            <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile">
                 <mat-grid-tile  [colspan]="1" [rowspan]="1">
                     <div class="centered visible" >
                         <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/logoRED.png" class="img-shadow" />

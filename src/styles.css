@@ -3,6 +3,7 @@
   --color-secondary: #161718;
   --color-tertiary: rgb(44, 39, 39);
   --color-pure-white: #272323;
+  --color-pure-grey: #181515;
 }
 html {
   -webkit-touch-callout: none;

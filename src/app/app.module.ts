@@ -69,7 +69,7 @@ const appRoutes: Routes = [
     PortfolioComponent,
   ],
   imports: [
-    RouterModule.forRoot(appRoutes, { enableTracing: false }),
+    RouterModule.forRoot(appRoutes, { enableTracing: false , scrollPositionRestoration: 'enabled'}),
     BrowserModule,
     MaterializeModule,
     HttpClientModule,

@@ -18,14 +18,14 @@
         <i class="material-icons yellow-theme-text text-darken-3">menu</i>
       </a>
       <ul class="right hide-on-med-and-down">
-        <li [ngClass]="route.includes('about') ? 'active' : ' '">
-          <a class="yellow-theme-text text-darken-3" [routerLink]="['/about', currentPerson]"
-            >/About</a
-          >
-        </li>
         <li *ngIf="currentPerson === 'August'" [ngClass]="route.includes('portfolio') ? 'active' : ' '">
           <a class="yellow-theme-text text-darken-3" [routerLink]="['/portfolio', currentPerson]"
             >/Portfolio</a
+          >
+        </li>
+        <li [ngClass]="route.includes('about') ? 'active' : ' '">
+          <a class="yellow-theme-text text-darken-3" [routerLink]="['/about', currentPerson]"
+            >/About</a
           >
         </li>
         <li [ngClass]="route.includes('projects') ? 'active' : ' '">
@@ -43,20 +43,20 @@
   </nav>
 </div>
 <ul class="side-nav yellow-theme-text" id="mobile-version">
-  <li class="sidenav-close yellow-theme-text" [ngClass]="route.includes('about') ? 'active ' : ' '">
-    <a
-      href="#!"
-      class="yellow-theme-text text-darken-3 waves-effect sidenav-close"
-      [routerLink]="['/about', currentPerson]"
-      >/About</a
-    >
-  </li>
   <li *ngIf="currentPerson === 'August'" class="sidenav-close yellow-theme-text" [ngClass]="route.includes('portfolio') ? 'active' : ' '">
     <a
       href="#!"
       class="yellow-theme-text text-darken-3 waves-effect sidenav-close"
       [routerLink]="['/portfolio', currentPerson]"
       >/Portfolio</a
+    >
+  </li>
+  <li class="sidenav-close yellow-theme-text" [ngClass]="route.includes('about') ? 'active ' : ' '">
+    <a
+      href="#!"
+      class="yellow-theme-text text-darken-3 waves-effect sidenav-close"
+      [routerLink]="['/about', currentPerson]"
+      >/About</a
     >
   </li>
   <li class="sidenav-close yellow-theme-text" [ngClass]="route.includes('projects') ? 'active' : ' '">
