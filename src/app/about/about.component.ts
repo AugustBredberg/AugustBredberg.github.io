@@ -21,7 +21,12 @@ export class AboutComponent implements OnInit {
   education: InfoField[]
   languages: InfoField[]
   starredProjects: any[] = []
-  
+  isMobile = false
+  rowNum = 1
+  programmingLanguages_columnNum = 5
+  programmingLanguages: string[]
+  gridlist_desired_rowHeight:string
+
   whoAmI: String
   profilePic: String
   spokenLanguages: [String]
@@ -36,6 +41,13 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.gridlist_desired_rowHeight = "30rem"
+    if(window.innerWidth < window.innerHeight){
+      this.isMobile = true
+      this.rowNum = 2
+      this.programmingLanguages_columnNum = 4
+      this.gridlist_desired_rowHeight = "15rem"
+    }
     this.routeSub = this.route.params.subscribe(params => {
       console.log(params) //log the entire params object
       console.log(params['firstname']) //log the value of id
@@ -45,6 +57,7 @@ export class AboutComponent implements OnInit {
       this.education = this.aboutService.getEducation(this.firstName)
       this.works = this.aboutService.getWorks(this.firstName)
       this.languages = this.aboutService.getLanguages(this.firstName)
+      this.programmingLanguages = this.aboutService.getProgrammingLanguages(this.firstName)
       this.welcomeMessage = this.getWelcomeMessage();
       // Checks if the URL ends with 'August' || 'William' || 'Alyson'
       // if it doesn't, navigate to home
@@ -76,7 +89,7 @@ export class AboutComponent implements OnInit {
     console.log(this.firstName)
     switch(this.firstName){
       case "August": {
-        return "I'm doing my master in software engineering at Uppsala university, whilst working part time as a software developer for Säljpoolen AB. \n\nI have a great interest in system design, software development and leadership. In addition to my technical interests i take every opportunity i get to engage myself in the non-profit student associations that Uppsala has to offer. \nMy long term goal is to work with challenging and rewarding problem solving at a place that offers good development opportunities with nice colleagues"
+        return "I have a great interest in system design, software development and leadership. In addition to my technical interests i take every opportunity i get to engage myself in the non-profit student associations that Uppsala has to offer. \nMy long term goal is to work with challenging and rewarding problem solving at a place that offers good development opportunities with nice colleagues"
       }
       case "William": {
         return "About William"
@@ -131,7 +144,7 @@ export class AboutComponent implements OnInit {
         return "Good Morning!"
       }
       case 11 <= thisHour && thisHour < 13: {
-        return "Hello there, good day!"
+        return "Hello there!"
       }
       case 13 <= thisHour && thisHour < 17: {
         return "Good afternoon, hope you've had a good day thus far!"

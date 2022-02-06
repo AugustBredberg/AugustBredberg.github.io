@@ -6,29 +6,33 @@
             AUGUST
     ---------------------------------------------------------------------->
         <div class="centered frame single frame-august">
-            
-            <mat-grid-list cols="2" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" >
+            <div class="centered visible" >
+                <div class="col s12 animated bounceInLeft">
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.2em' : '1.9em' }">{{welcomeMessage}} My name is</h5>
+                 
+                       
+                    <h1 class="yellow-theme-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.9em' : '2.7em' }"><b>{{firstName}} Bredberg</b></h1>
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.2em' : '1.9em' }">Welcome to my portfolio!</h5>
+                       
+                </div>
+            </div>
+
+
+            <mat-grid-list cols="4" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" >
+                
+                <mat-grid-tile  [colspan]="1" [rowspan]="1">
+                    <div class="centered visible" >
+                        <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/arrowdown.gif" class="img-shadow" />
+                    </div>
+                </mat-grid-tile>
                 <mat-grid-tile  [colspan]="1" [rowspan]="2">
                     <div class="centered visible" >
-                        <div class="col s12 animated bounceInLeft">
-                            <h1 class="yellow-theme-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.9em' : '2.7em' }"><b>{{firstName}} Bredberg</b></h1>
-                            <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.5em' : '2.3em' }">{{welcomeMessage}}</h5>
-                        </div>
+                        <img style="max-width: 100%; height: auto;" src="assets/portfolioAugust/augusthund.GIF" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile  [colspan]="1" [rowspan]="1">
                     <div class="centered visible" >
-                        <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/augustrosa.jpg" class="img-shadow" />
-                    </div>
-                </mat-grid-tile>
-                <mat-grid-tile  [colspan]="1" [rowspan]="1">
-                    <div class="centered visible" >
-                        <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/augustotilda.jpg" class="img-shadow" />
-                    </div>
-                </mat-grid-tile>
-                <mat-grid-tile  [colspan]="1" [rowspan]="2">
-                    <div class="centered visible" >
-                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/augustvinter.jpg" class="img-shadow" />
+                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/augustcake.GIF" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
             </mat-grid-list>

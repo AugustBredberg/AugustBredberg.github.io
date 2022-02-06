@@ -1,4 +1,4 @@
-<div *ngIf="route !== '/'" class="navbar-fixed">
+<div *ngIf="route !== '/'" [ngClass]="route.includes('portfolio') ? '' : 'navbar-fixed'">
   <nav class="z-depth-0 white animated slideInDown delay-1s">
     <div id="navbar" class="nav-wrapper">
       <a routerLink="/" class="sidenav-trigger button-collapse right hide-on-large-only">

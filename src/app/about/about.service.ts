@@ -118,4 +118,24 @@ export class AboutService {
       }
     }
   }
+
+  getProgrammingLanguages(firstName): string[]{
+    switch(firstName){
+      case "August": {
+        return ["Java", "SQL", "JavaScript", "TypeScript", "ASP. NET", "C#", "Angular", "HTML/CSS", "Python", "Flutter", "Dart", "C++", "C", "Haskell", "GitHub", "GitLab", "Scrum", "Kanban", "CI/CD", "Matlab"]
+      }
+      case "William": {
+        return []
+      }
+      case "Alyson": {
+        return []
+      }
+      case "Zacharias": {
+        return []
+      }
+      default: {
+        return []
+      }
+    }
+  }
 }

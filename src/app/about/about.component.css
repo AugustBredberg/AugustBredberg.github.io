@@ -57,4 +57,31 @@ td a:hover {
 }
 .theme-color{
   background-color: #161718;
+} 
+
+
+.frame-august{
+  width: 100%;
+}
+
+.grid{
+  max-width: 80vw !important;
+  height: inherit; 
+  width: 70em; 
+  display: block; 
+  margin: auto;
+}
+.grid-mobile{
+  max-width: 80vw !important;
+  height: fit-content; 
+  width: 70em; 
+  display: block; 
+  margin: auto;
+}
+.mat-grid-tile{
+    overflow: visible !important;
+}
+.img-shadow{
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }

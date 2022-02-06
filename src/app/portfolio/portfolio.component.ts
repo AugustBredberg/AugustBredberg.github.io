@@ -106,7 +106,7 @@ export class PortfolioComponent implements OnInit {
         return "Good Morning!"
       }
       case 11 <= thisHour && thisHour < 13: {
-        return "Hello there, good day!"
+        return "Hello there!"
       }
       case 13 <= thisHour && thisHour < 17: {
         return "Good afternoon, hope you've had a good day thus far!"
