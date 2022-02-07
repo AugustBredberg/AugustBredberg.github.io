@@ -13,7 +13,7 @@
             </div>
             <a
                 style="max-width: 80%; max-height: 20%; height: 5%;"
-                class="card animated zoomIn col s10 offset-s1 m5 l5"
+                class="card animated zoomIn faster col s10 offset-s1 m5 l5"
                 [routerLink]="['/about', firstName]"
                 routerLinkActive="active"
                 >
@@ -25,7 +25,7 @@
                     </span>
                 </div>
             </a>
-            <button id="toPortfolioButton" class="toPortfolioButton animated zoomIn" (click)="scroll(unwatchd)">
+            <button id="toPortfolioButton" class="toPortfolioButton animated zoomIn faster" (click)="scroll(unwatchd)">
             <div id="toPortfolioArrow" class="col" style="bottom: 5rem;">
                 <div class="row toPortfolio">
                     <h5 class="white-text text-darken-3">To my portfolio</h5>
@@ -41,7 +41,10 @@
     <!---------------------------------------------------------------------
             UNWATCHD
     ---------------------------------------------------------------------->
-        <div class="centered frame single" #unwatchd>
+        <div class="centered frame single padding-top-frame" >
+            <div #unwatchd class="notransition col s12 animated bounceInLeft" style="text-align: center;">
+                <h1 class="yellow-theme-text text-darken-3"><b>unWatchd</b></h1>
+            </div>
             <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile">
                 <mat-grid-tile  [colspan]="1" [rowspan]="1">
                     <div class="centered visible" >
@@ -49,14 +52,14 @@
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
-                    <div class="centered visible" style="flex-direction: column;">
+                    <div class="centered visible textfield" style="flex-direction: column;">
                         <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">A project with friends. My main responsibility during the project was to seamlessly integrate our server and the IMDB API with the mobile application, aswell as front-end design.</h5>
                         <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">Share your movie experiences and see what your friends are watching. Rate movies and search for highly rated movies, both IMDB-ratings and UnWatchd-ratings.
                             The social media for sharing your movie experiences and keeping track of watched and un-watched films</h5>
                     </div>
                 </mat-grid-tile>
             </mat-grid-list>
-            <mat-grid-list class="grid-unwatchd" cols="{{columnNum}}">
+            <mat-grid-list class="grid-unwatchd" cols="{{columnNum}}" rowHeight="{{gridlist_desired_rowHeight}}"    >
                 
 
                 <mat-grid-tile  [colspan]="2" [rowspan]="1">
@@ -74,9 +77,28 @@
                         <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/profileView.jpg" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
+                <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
+                    <div class="centered visible textfield" style="flex-direction: column;">
+                        <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                            Keep track of what friends and family is watching by following their accounts
+                        </h5>
+                    </div>
+                </mat-grid-tile>
                 <mat-grid-tile [colspan]="1" [rowspan]="2" >
                     <div class="popup_element visible">
                         <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/searchView.jpg" class="img-shadow" />
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
+                    <div class="centered visible textfield" style="flex-direction: column;">
+                        <h5 class=" white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                            Discuss your experiences in the comment section in real time 
+                        </h5>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="2" >
+                    <div class="popup_element visible">
+                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/unwatchd_comment.png" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="1" [rowspan]="2" >
@@ -117,7 +139,109 @@
                 </mat-grid-tile>
               </mat-grid-list>
         </div>
+
+
+    <!---------------------------------------------------------------------
+            SKILL MILL
+    ---------------------------------------------------------------------->
+    <div class="centered frame single padding-top-frame" >
+        <div #skillmill class="notransition col s12 animated bounceInLeft" style="text-align: center;">
+            <h1 class="yellow-theme-text text-darken-3"><b>SkillMill</b></h1>
+        </div>
+        <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" rowHeight="">
+            <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
+                <div class="centered visible textfield" style="flex-direction: column;">
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                        The SkillMill project is an initiative co-funded by the Erasmus+ programme of the European Union. 
+                        The primary goal is to provide studentswho study abroad a way to keep track of the 
+                        existence and development of their professional competencies. These competencies include skillslike 
+                        interacting with colleagues, how you solve problems, and how you plan your work. 
+                    </h5>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile  [colspan]="1" [rowspan]="1">
+                <div class="centered visible" >
+                    <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/SkillMill_logo.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list class="grid-unwatchd" cols="{{columnNum}}">
+            
+
+            <mat-grid-tile  [colspan]="1" [rowspan]="2">
+                <div class="popup_element visible">
+                    <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/skillmill_login.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile  [colspan]="1" [rowspan]="2">
+                <div class="popup_element visible">
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/skillmill_newSituation.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                <div class="centered visible textfield" style="flex-direction: column;">
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                        These competencies are highly sought after by employers, and according to some employers, 
+                        many candidates lack the necessary professional competencies they need to be effective in the working environment.
+                    </h5>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="2" >
+                <div class="popup_element visible">
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/searchView.jpg" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="2" >
+                <div class="popup_element visible">
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/feedView.jpg" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                <div class="centered visible textfield" style="flex-direction: column;">
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                        Me and my team provided the SkillMill project with a mobile application in which the target group, students, can keep a 
+                        journal about transformative experiences. The created mobile application serves as a foundation for the 
+                        SkillMill project to build upon further to allow users to identify, understand and verbalize their professional competencies
+                    </h5>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2" [rowspan]="1" >
+                <a
+                    style="max-width: 80%;"
+                    class="card animated zoomIn faster col s10 offset-s1 m5 l5"
+                    href="https://github.com/AugustBredberg/unWatchd"
+                    target="_blank"
+                    >
+                    <div
+                    class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3"
+                    >
+                    <span class="card-title">
+                        <div class="card-title-content">
+                        <h5 class="project-title">unWatchd</h5>
+                        <span
+                            class="
+                            new
+                            badge
+                            secondary-color
+                            darken-3
+                            white-text
+                            hide-on-med-and-down
+                            "
+                            ><i class="fa fa-terminal" aria-hidden="true"></i
+                            >Flutter</span
+                        >
+                        </div>
+                    </span>
+                    <p class="project-description white-text flow-text">The code behind unWatched. This link leads to Github.com</p>
+                    </div>
+                </a>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
     </div>
+
+
+    
 </div>
 
 

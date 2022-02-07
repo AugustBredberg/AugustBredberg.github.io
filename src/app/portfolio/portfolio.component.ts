@@ -25,6 +25,8 @@ export class PortfolioComponent implements OnInit {
   aboutUnwatchdColumns = 1
   welcomeMessage: string
 
+  gridlist_desired_rowHeight:string
+
   private routeSub: Subscription;
   githubProjects: any[] = []
   tiles: Tile[] = [
@@ -43,11 +45,15 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     // If mobile, use 1 column
+    
+    this.gridlist_desired_rowHeight = "20rem"
     if(window.innerWidth < window.innerHeight){
       this.columnNumHeader = 1
       this.columnNum = 2
       this.isMobile = true
       this.aboutUnwatchdColumns = 2
+      
+    this.gridlist_desired_rowHeight = "12rem"
     }
     this.routeSub = this.route.params.subscribe(params => {
       console.log(params) //log the entire params object
