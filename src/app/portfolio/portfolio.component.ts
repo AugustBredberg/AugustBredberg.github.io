@@ -62,7 +62,10 @@ export class PortfolioComponent implements OnInit {
       (err) => console.warn('HTTP Error -' + err),
     )
   }
-
+  getState(outlet) {
+    // Changing the activatedRouteData.state triggers the animation
+    return outlet.activatedRouteData.state;
+  }
   scroll(el: HTMLElement) {
     el.scrollIntoView( {behavior: 'smooth'});
   }

@@ -19,6 +19,8 @@ import { FooterComponent } from './footer/footer.component'
 import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 // TODO: routing working in production
 // https://angular.io/api/common/PathLocationStrategy
 
@@ -31,12 +33,12 @@ const appRoutes: Routes = [
   {
     path: 'about/:firstname',
     component: AboutComponent,
-    data: { title: 'About me' },
+    data: { title: 'About me', animation: 'About'  },
   },
   {
     path: 'portfolio/:firstname',
     component: PortfolioComponent,
-    data: { title: 'Contact' },
+    data: { title: 'Portfolio', animation: 'Portfolio' },
   },
   {
     path: 'projects/:firstname',
@@ -71,6 +73,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(appRoutes, { enableTracing: false , scrollPositionRestoration: 'enabled'}),
     BrowserModule,
+    BrowserAnimationsModule,
     MaterializeModule,
     HttpClientModule,
     MatGridListModule,

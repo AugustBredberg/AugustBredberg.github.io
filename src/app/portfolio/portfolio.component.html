@@ -7,7 +7,7 @@
     ---------------------------------------------------------------------->
         <div class="centered frame single frame-august">
             
-            <div class="col s12 animated bounceInLeft" style="text-align: center;">
+            <div class="notransition col s12 animated bounceInLeft" style="text-align: center;">
                 <h1 class="yellow-theme-text text-darken-3"><b>{{firstName}} Bredberg</b></h1>
                 <h5 class="white-text text-darken-3">Software engineer and full-stack developer </h5>
             </div>
@@ -15,6 +15,7 @@
                 style="max-width: 80%; max-height: 20%; height: 5%;"
                 class="card animated zoomIn faster col s10 offset-s1 m5 l5"
                 [routerLink]="['/about', firstName]"
+                routerLinkActive="active"
                 >
                 <div class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3" style="height: 5%;">
                     <span class="card-title">
@@ -24,8 +25,8 @@
                     </span>
                 </div>
             </a>
-            <button class="toPortfolioButton" (click)="scroll(unwatchd)">
-            <div class="col" style="bottom: 5rem;">
+            <button id="toPortfolioButton" class="toPortfolioButton" (click)="scroll(unwatchd)">
+            <div id="toPortfolioArrow" class="col" style="bottom: 5rem;">
                 <div class="row toPortfolio">
                     <h5 class="white-text text-darken-3">To my portfolio</h5>
                 </div>

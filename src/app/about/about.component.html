@@ -16,7 +16,7 @@
       <mat-grid-list cols="2" [class.grid-mobile]="isMobile" [class.grid]="!isMobile" rowHeight="{{gridlist_desired_rowHeight}}">
           
         <mat-grid-tile  [colspan]="1" [rowspan]="rowNum">
-            <div class="centered visible" >
+            <div class="centered visible textfield" >
               <h5 class="white-text text-darken-3" style="padding: 1em;" [ngStyle]="{'font-size': isMobile === true ? '0.8em' : '1.4em' }">
                 I'm a Swedish software engineer with a passion for cool tech and challenging problems. 
                 I've been interested in computer science for as long as I can remember.
@@ -36,7 +36,7 @@
             </div>'
         </mat-grid-tile>
         <mat-grid-tile  [colspan]="1" [rowspan]="rowNum">
-          <div class="centered visible" >
+          <div class="centered visible textfield" >
             <h5 class="white-text text-darken-3" style="padding: 1em;" [ngStyle]="{'font-size': isMobile === true ? '0.8em' : '1.4em' }">
               I'm doing my masters in software engineering at Uppsala University. In parallel with 
               my studies I've been working part time as a software developer at  
@@ -48,7 +48,7 @@
           </div>
         </mat-grid-tile>
         <mat-grid-tile  [colspan]="1" [rowspan]="rowNum">
-          <div class="centered visible" >
+          <div class="centered visible textfield" >
             <h5 class="white-text text-darken-3" style="padding: 1em;" [ngStyle]="{'font-size': isMobile === true ? '0.8em' : '1.4em' }">
               I'm a very structured person who loves working together with peers towards a shared goal. 
               Thanks to the different projects I've done for myself, with friends and at work I've obtained a wide programming-skillset. 
@@ -64,28 +64,28 @@
               <img [ngStyle]="{'max-width': isMobile === true ? '100%' : '150%' }" style="height: auto;" src="assets/portfolioAugust/augustkatt.GIF" class="img-shadow" />
           </div>'
         </mat-grid-tile>
-        <mat-grid-tile [colspan]="1" [rowspan]="rowNum" >
+        <mat-grid-tile [colspan]="2 " [rowspan]="1" >
           <div class="centered visible" style="height: {{gridlist_desired_rowHeight}} !important;">
               <img [ngStyle]="{'max-width': isMobile === true ? '150%' : '200%' ,
-              'right': isMobile === true ? '20%' : '20%',
-              'top': isMobile === true ? '-20%' : '10%'
+              'right': isMobile === true ? '0%' : '0%',
+              'top': isMobile === true ? '10%' : '10%'
             }"
-              style="width: 30%;  position: relative; z-index: 2;" src="assets/portfolioAugust/wwlogo.png" class="img-shadow" />
+              style="width: 20%;  position: relative; z-index: 2;" src="assets/portfolioAugust/wwlogo.png" class="img-shadow" />
           
               <img [ngStyle]="{
-                'max-width': isMobile === true ? '150%' : '200%',
-                'left': isMobile === true ? '-10%' : '-10%',
-                'top': isMobile === true ? '20%' : '30%'
+                'max-width': isMobile === true ? '150%' : '80%',
+                'left': isMobile === true ? '10%' : '10%',
+                'top': isMobile === true ? '20%' : '20%'
               }"
               
-              style="width:100%; height: auto; position: absolute; z-index: 1;" src="assets/portfolioAugust/ww_valthorens.GIF" class="img-shadow" />
+              style="width:80%; height: auto; position: absolute; z-index: 1;" src="assets/portfolioAugust/ww_valthorens.GIF" class="img-shadow" />
               
             </div>
         </mat-grid-tile>
 
       
-        <mat-grid-tile  [colspan]="1" [rowspan]="rowNum">
-          <div class="centered visible" >
+        <mat-grid-tile  [colspan]="2" [rowspan]="1">
+          <div class="centered visible textfield" >
             <h5 class="white-text text-darken-3" style="padding: 1em;" [ngStyle]="{'font-size': isMobile === true ? '0.8em' : '1.4em' }">
               For the past 3 years me and two friends have organized a ski-trip for the engineers of Uppsala called Week of Winter.
               The first year we held the ski-trip in 2020 we rounded up over 200 students and arranged the journey, the housing and the ski-passes for everyone.

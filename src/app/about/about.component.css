@@ -58,7 +58,9 @@ td a:hover {
 .theme-color{
   background-color: #161718;
 } 
-
+.textfield{
+  text-align: center;
+}
 
 .frame-august{
   width: 100%;
