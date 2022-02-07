@@ -33,12 +33,12 @@ const appRoutes: Routes = [
   {
     path: 'about/:firstname',
     component: AboutComponent,
-    data: { title: 'About me', animation: 'About'  },
+    data: { title: 'About me'}, //, animation: 'About'  },
   },
   {
     path: 'portfolio/:firstname',
     component: PortfolioComponent,
-    data: { title: 'Portfolio', animation: 'Portfolio' },
+    data: { title: 'Portfolio' }, //, animation: 'Portfolio' },
   },
   {
     path: 'projects/:firstname',
