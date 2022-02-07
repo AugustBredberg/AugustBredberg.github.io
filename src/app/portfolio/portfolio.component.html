@@ -1,7 +1,11 @@
 
-
-<div class="centered">
+<div #top class="centered">
     <div class="wrapper">
+        <mat-list class="dotnav" role="list">
+            <mat-list-item (click)="scroll(top)" role="listitem"><div class="bullet-point"></div></mat-list-item>
+            <mat-list-item (click)="scroll(unwatchd)" role="listitem"><div class="bullet-point"></div></mat-list-item>
+            <mat-list-item (click)="scroll(skillmill)" role="listitem"><div class="bullet-point"></div></mat-list-item>
+        </mat-list>
     <!---------------------------------------------------------------------
             AUGUST
     ---------------------------------------------------------------------->
@@ -48,7 +52,7 @@
             <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile">
                 <mat-grid-tile  [colspan]="1" [rowspan]="1">
                     <div class="centered visible" >
-                        <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/logoRED.png" class="img-shadow" />
+                        <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/unwatchd/logoRED.png" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
@@ -64,17 +68,17 @@
 
                 <mat-grid-tile  [colspan]="2" [rowspan]="1">
                     <div class="popup_element visible">
-                        <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/neverLetAMovieGoUnwatchd.png" class="img-shadow" />
+                        <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/unwatchd/neverLetAMovieGoUnwatchd.png" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile  [colspan]="1" [rowspan]="2">
                     <div class="popup_element visible">
-                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/notificationFeed.jpg" class="img-shadow" />
+                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/unwatchd/notificationFeed.jpg" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="1" [rowspan]="2" >
                     <div class="popup_element visible">
-                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/profileView.jpg" class="img-shadow" />
+                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/unwatchd/profileView.jpg" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
@@ -86,7 +90,7 @@
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="1" [rowspan]="2" >
                     <div class="popup_element visible">
-                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/searchView.jpg" class="img-shadow" />
+                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/unwatchd/searchView.jpg" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
@@ -98,12 +102,12 @@
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="1" [rowspan]="2" >
                     <div class="popup_element visible">
-                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/unwatchd_comment.png" class="img-shadow" />
+                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/unwatchd/unwatchd_comment.png" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="1" [rowspan]="2" >
                     <div class="popup_element visible">
-                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/feedView.jpg" class="img-shadow" />
+                        <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/unwatchd/feedView.jpg" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="2" [rowspan]="1" >
@@ -161,7 +165,7 @@
             </mat-grid-tile>
             <mat-grid-tile  [colspan]="1" [rowspan]="1">
                 <div class="centered visible" >
-                    <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/SkillMill_logo.png" class="img-shadow" />
+                    <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/skillmill/SkillMill_logo.png" class="img-shadow" />
                 </div>
             </mat-grid-tile>
         </mat-grid-list>
@@ -170,15 +174,15 @@
 
             <mat-grid-tile  [colspan]="1" [rowspan]="2">
                 <div class="popup_element visible">
-                    <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/skillmill_login.png" class="img-shadow" />
+                    <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/skillmill/skillmill_login.png" class="img-shadow" />
                 </div>
             </mat-grid-tile>
-            <mat-grid-tile  [colspan]="1" [rowspan]="2">
+            <mat-grid-tile *ngIf=isMobile [colspan]="1" [rowspan]="2" >
                 <div class="popup_element visible">
-                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/skillmill_newSituation.png" class="img-shadow" />
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/skillmill/skillmill_emojis.png" class="img-shadow" />
                 </div>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="1" [rowspan]="1" >
+            <mat-grid-tile [colspan]="2" [rowspan]="1" >
                 <div class="centered visible textfield" style="flex-direction: column;">
                     <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
                         These competencies are highly sought after by employers, and according to some employers, 
@@ -186,17 +190,25 @@
                     </h5>
                 </div>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="1" [rowspan]="2" >
+            <mat-grid-tile  [colspan]="1" [rowspan]="2">
                 <div class="popup_element visible">
-                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/searchView.jpg" class="img-shadow" />
+                    <img [ngStyle]="{'max-width': isMobile === true ? '90%' : '120%' ,
+                        'width': isMobile === true ? '16rem' : '20rem'
+                    }"
+                    style="height: auto;" src="assets/portfolioAugust/skillmill/skillmill.gif" class="img-shadow" />
                 </div>
             </mat-grid-tile>
             <mat-grid-tile [colspan]="1" [rowspan]="2" >
                 <div class="popup_element visible">
-                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/feedView.jpg" class="img-shadow" />
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/skillmill/skillmill_success.png" class="img-shadow" />
                 </div>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="1" [rowspan]="1" >
+            <mat-grid-tile *ngIf=!isMobile [colspan]="1" [rowspan]="2" >
+                <div class="popup_element visible">
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/skillmill/skillmill_emojis.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2" [rowspan]="1" >
                 <div class="centered visible textfield" style="flex-direction: column;">
                     <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
                         Me and my team provided the SkillMill project with a mobile application in which the target group, students, can keep a 
@@ -209,7 +221,7 @@
                 <a
                     style="max-width: 80%;"
                     class="card animated zoomIn faster col s10 offset-s1 m5 l5"
-                    href="https://github.com/AugustBredberg/unWatchd"
+                    href="https://github.com/AugustBredberg/SkillMill-Bachelor-project"
                     target="_blank"
                     >
                     <div
@@ -217,7 +229,7 @@
                     >
                     <span class="card-title">
                         <div class="card-title-content">
-                        <h5 class="project-title">unWatchd</h5>
+                        <h5 class="project-title">SkillMill</h5>
                         <span
                             class="
                             new
@@ -232,7 +244,7 @@
                         >
                         </div>
                     </span>
-                    <p class="project-description white-text flow-text">The code behind unWatched. This link leads to Github.com</p>
+                    <p class="project-description white-text flow-text">The code behind SkillMill. This link leads to Github.com</p>
                     </div>
                 </a>
             </mat-grid-tile>
