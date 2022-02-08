@@ -27,6 +27,9 @@ export class PortfolioComponent implements OnInit {
 
   gridlist_desired_rowHeight:string
 
+
+  unWatchd_inView = false;
+
   private routeSub: Subscription;
   githubProjects: any[] = []
   tiles: Tile[] = [
@@ -135,4 +138,6 @@ export class PortfolioComponent implements OnInit {
     }
   }
 
+  
+  
 }

@@ -21,6 +21,8 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NguiInviewModule, NguiListModule, NguiUtilsModule } from '@ngui/common';
+
 
 // TODO: routing working in production
 // https://angular.io/api/common/PathLocationStrategy
@@ -81,6 +83,11 @@ const appRoutes: Routes = [
     MatCardModule,
     MatListModule,
     FlexLayoutModule,
+    NguiInviewModule, NguiListModule, NguiUtilsModule,
+  ],
+  exports:[
+
+    NguiInviewModule, NguiListModule, NguiUtilsModule,
   ],
   providers: [
     {

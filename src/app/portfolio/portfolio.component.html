@@ -1,11 +1,17 @@
 
 <div #top class="centered">
     <div class="wrapper">
-        <mat-list class="dotnav" role="list">
-            <mat-list-item (click)="scroll(top)" role="listitem"><div class="bullet-point"></div></mat-list-item>
-            <mat-list-item (click)="scroll(unwatchd)" role="listitem"><div class="bullet-point"></div></mat-list-item>
-            <mat-list-item (click)="scroll(skillmill)" role="listitem"><div class="bullet-point"></div></mat-list-item>
-        </mat-list>
+        <div style="width: 2rem; height: auto; text-align: center;">
+
+        
+            <mat-list class="dotnav" role="list">
+                <mat-list-item class="center-dot" (click)="scroll(top)" role="listitem">
+                    <div [ngClass]="unWatchd_inView ? 'bullet-point-selected' : 'bullet-point'"></div>
+                </mat-list-item>
+                <mat-list-item class="center-dot" (click)="scroll(unwatchd)" role="listitem"><div class="bullet-point"></div></mat-list-item>
+                <mat-list-item class="center-dot" (click)="scroll(skillmill)" role="listitem"><div class="bullet-point"></div></mat-list-item>
+            </mat-list>
+        </div>
     <!---------------------------------------------------------------------
             AUGUST
     ---------------------------------------------------------------------->
@@ -45,8 +51,12 @@
     <!---------------------------------------------------------------------
             UNWATCHD
     ---------------------------------------------------------------------->
-        <div class="centered frame single padding-top-frame" >
-            <div #unwatchd class="notransition col s12 animated bounceInLeft" style="text-align: center;">
+        
+   
+        <div #unwatchd class="centered frame single padding-top-frame" >
+            <ngui-inview (observer)="true" (inview)="unWatchd_inView = true" (notInview)="unWatchd_inView = false" >
+                <ng-container *ngIf="true">
+            <div  class="notransition col s12 animated bounceInLeft" style="text-align: center;">
                 <h1 class="yellow-theme-text text-darken-3"><b>unWatchd</b></h1>
             </div>
             <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile">
@@ -142,6 +152,8 @@
                     </a>
                 </mat-grid-tile>
               </mat-grid-list>
+            </ng-container>
+        </ngui-inview>
         </div>
 
 
