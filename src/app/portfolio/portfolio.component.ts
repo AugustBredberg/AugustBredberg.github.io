@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
+
+
 
 export interface Tile {
   color: string;
@@ -17,6 +19,7 @@ export interface Tile {
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+
   columnNumHeader = 2
   columnNum = 3
   firstName: string
@@ -29,7 +32,9 @@ export class PortfolioComponent implements OnInit {
 
 
   unWatchd_inView = false;
+  skillmill_inView = false
 
+  varTrue = true
   private routeSub: Subscription;
   githubProjects: any[] = []
   tiles: Tile[] = [
@@ -78,6 +83,7 @@ export class PortfolioComponent implements OnInit {
   scroll(el: HTMLElement) {
     el.scrollIntoView( {behavior: 'smooth'});
   }
+
   getApiProjects(): Observable<any[]> {
     var getProjectsUrl =
       'https://api.github.com/users/augustbredberg/repos?sort=pushed'
