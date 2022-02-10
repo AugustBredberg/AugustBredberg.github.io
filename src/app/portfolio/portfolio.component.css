@@ -90,7 +90,21 @@
   height: fit-content; 
   width: 70em; 
   display: block; 
-  padding-bottom: 150% !important;
+  padding-bottom: 200% !important;
+}
+.grid-skillmill-mobile{
+  max-width: 80vw !important;
+  height: inherit; 
+  width: 70em; 
+  display: block; 
+  padding-bottom: 250% !important;
+}
+.grid-skillmill{
+  max-width: 80vw !important;
+  height: inherit; 
+  width: 70em; 
+  display: block; 
+  padding-bottom: 130% !important;
 }
 .mat-grid-tile{
     overflow: visible !important;

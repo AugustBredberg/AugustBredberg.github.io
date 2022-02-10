@@ -65,18 +65,16 @@
    
         <div class="centered frame single padding-top-frame" >
             <div #unwatchd></div>
-            <ngui-inview (inview)="unWatchd_inView = true" (notInview)="unWatchd_inView = false" >
-            <ng-container *ngIf="true">
             <div  class="notransition col s12 animated bounceInLeft" style="text-align: center;">
                 <h1 class="yellow-theme-text text-darken-3"><b>unWatchd</b></h1>
             </div>
-            <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile">
+            <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" >
                 <mat-grid-tile  [colspan]="1" [rowspan]="1">
                     <div class="centered visible" >
                         <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/unwatchd/logoRED.png" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
-                <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
+                <mat-grid-tile  [colspan]="1" [rowspan]="1">
                     <div class="centered visible textfield" style="flex-direction: column;">
                         <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">A project with friends. My main responsibility during the project was to seamlessly integrate our server and the IMDB API with the mobile application, aswell as front-end design.</h5>
                         <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">Share your movie experiences and see what your friends are watching. Rate movies and search for highly rated movies, both IMDB-ratings and UnWatchd-ratings.
@@ -163,8 +161,6 @@
                     </a>
                 </mat-grid-tile>
               </mat-grid-list>
-            </ng-container>
-        </ngui-inview>
         </div>
 
 
@@ -182,8 +178,8 @@
                 <div class="centered visible textfield" style="flex-direction: column;">
                     <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
                         The SkillMill project is an initiative co-funded by the Erasmus+ programme of the European Union. 
-                        The primary goal is to provide studentswho study abroad a way to keep track of the 
-                        existence and development of their professional competencies. These competencies include skillslike 
+                        The primary goal is to provide students who study abroad a way to keep track of the 
+                        existence and development of their professional competencies. These competencies include skills like 
                         interacting with colleagues, how you solve problems, and how you plan your work. 
                     </h5>
                 </div>
@@ -194,7 +190,7 @@
                 </div>
             </mat-grid-tile>
         </mat-grid-list>
-        <mat-grid-list class="grid-unwatchd" cols="{{columnNum}}">
+        <mat-grid-list [class.grid-skillmill-mobile]="isMobile" [class.grid-skillmill]="!isMobile" cols="{{columnNum}}">
             
 
             <mat-grid-tile  [colspan]="1" [rowspan]="2">
@@ -276,6 +272,77 @@
           </mat-grid-list>
         </div>
 
+    <!---------------------------------------------------------------------
+            THIS SITE
+    ---------------------------------------------------------------------->
+    
+    <div class="centered frame single padding-top-frame" >
+
+        <div #thisite></div>
+        <div class="notransition col s12 animated bounceInLeft" style="text-align: center;">
+            <h1 class="yellow-theme-text text-darken-3"><b>This site</b></h1>
+        </div>
+        <mat-grid-list  cols="2" [class.grid-unwatchd-mobile]="isMobile" [class.grid-thissite]="!isMobile" style="width: 80%;">
+            <mat-grid-tile  [colspan]="2" [rowspan]="1  ">
+                <div class="centered visible textfield" style="flex-direction: column;">
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                        I have also made this website! It is written in angular 13. This website was a project I started
+                        with the purpose of teaching myself angular for work. 
+                    </h5>
+                </div>
+            </mat-grid-tile>
+            
+            <mat-grid-tile [colspan]="2" [rowspan]="1" >
+                <a
+                    style="max-width: 80%;"
+                    class="card animated zoomIn faster col s10 offset-s1 m5 l5"
+                    href="https://github.com/AugustBredberg/AugustBredberg.github.io"
+                    target="_blank"
+                    >
+                    <div
+                    class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3"
+                    >
+                    <span class="card-title">
+                        <div class="card-title-content">
+                        <h5 class="project-title">This website!</h5>
+                        <span
+                            class="
+                            new
+                            badge
+                            secondary-color
+                            darken-3
+                            white-text
+                            hide-on-med-and-down
+                            "
+                            ><i class="fa fa-terminal" aria-hidden="true"></i
+                            >Angular</span
+                        >
+                        </div>
+                    </span>
+                    <p class="project-description white-text flow-text">The code behind this website! This link leads to Github.com</p>
+                    </div>
+                </a>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="1" >  
+                <a
+                    style="max-width: 80%; max-height: 20%; height: 5%;"
+                    class="card animated zoomIn faster col s10 offset-s1 m5 l5"
+                    [routerLink]="['/contact', firstName]"
+                    routerLinkActive="active"
+                    >
+                    <div class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3" style="height: 5%;">
+                        <span class="card-title">
+                            <div class="card-title-content" style="height: 5%;">
+                                <h5 class="project-title">Contact</h5>
+                            </div>
+                        </span>
+                    </div>
+                </a>
+            </mat-grid-tile>
+            
+          </mat-grid-list>
+        </div>
 
     </div> <!--WRAPPER-->
 </div><!--CENTERED-->

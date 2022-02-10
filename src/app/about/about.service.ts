@@ -122,7 +122,7 @@ export class AboutService {
   getProgrammingLanguages(firstName): string[]{
     switch(firstName){
       case "August": {
-        return ["Java", "SQL", "JavaScript", "TypeScript", "ASP. NET", "C#", "Angular", "HTML/CSS", "Python", "Flutter", "Dart", "C++", "C", "Haskell", "GitHub", "GitLab", "Scrum", "Kanban", "CI/CD", "Matlab, REST API"]
+        return ["Java", "SQL", "JavaScript", "TypeScript", "ASP. NET", "C#", "Angular", "HTML/CSS", "Python", "Flutter", "Dart", "C++", "C", "Haskell", "GitHub", "GitLab", "Scrum", "Kanban", "CI/CD", "Matlab", "REST API", "NodeJS"]
       }
       case "William": {
         return []
