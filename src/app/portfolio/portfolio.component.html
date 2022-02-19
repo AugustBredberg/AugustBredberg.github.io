@@ -1,33 +1,36 @@
 
-<div #top class="centered">
-    <div class="wrapper">
-        <!--
-        <div style="width: 2rem; height: auto; position: absolute; right: 3rem;">
-
+<div class="centered">
         
-            <mat-list *ngIf="unWatchd_inView || skillmill_inView" 
+        <div *ngIf="!isMobile">
+            <mat-list style="    position: fixed;
+            width: 8rem;
+            right: 0;
+            top: 30%;"
             [@inOutAnimation]
-             class="dotnav" role="list">
+             class="" role="list">
 
-                <mat-list-item class="center-dot" (click)="scroll(top)" role="listitem">
-                    <img style="max-width: 5%; height: auto;" src="assets/portfolioAugust/arrow-up.png" class="img-shadow" />
+                <mat-list-item class="center-dot" (click)="scroll(top)" role="listitem" style="height: 7rem;">
+                    <img style="max-width: 120%; height: auto; transform: rotate(180deg);" src="assets/portfolioAugust/arrowdown2.png" />
                 </mat-list-item>
-                <mat-list-item class="center-dot" (click)="scroll(unwatchd)" role="listitem">
-                    <img style="max-width: 5%; height: auto;" src="assets/portfolioAugust/unwatchd/logoRED.png" class="img-shadow" />
+                <mat-list-item class="center-dot" (click)="scroll(unwatchd)" role="listitem" style="height: 7rem;">
+                    <img style="max-width: 120%; height: auto;" src="assets/portfolioAugust/unwatchd/logoRED.png" class="img-shadow rounded" />
                 </mat-list-item>
-                <mat-list-item class="center-dot" (click)="scroll(skillmill)" role="listitem">
-
-                    <img style="max-width: 5%; height: auto;" src="assets/portfolioAugust/skillmill/SkillMill_logo.png" class="img-shadow" />
+                <mat-list-item class="center-dot" (click)="scroll(skillmill)" role="listitem" style="height: 7rem;">
+                    <img style="max-width: 120%; height: auto;" src="assets/portfolioAugust/skillmill/SkillMill_logo.png" class="img-shadow rounded" />
+                </mat-list-item>
+                <mat-list-item class="center-dot" (click)="scroll(thissite)" role="listitem" style="height: 7rem;">
+                    <img style="max-width: 120%; height: auto;" src="favicon.ico" class="img-shadow rounded" />
                 </mat-list-item>
             </mat-list>
         </div>
-        -->
+        
+    <div class="wrapper">
     <!---------------------------------------------------------------------
             AUGUST
     ---------------------------------------------------------------------->
         <div class="centered frame single frame-august">
             
-            <div class="notransition col s12 animated bounceInLeft" style="text-align: center;">
+            <div #top class="notransition col s12 animated bounceInLeft" style="text-align: center;">
                 <h1 class="yellow-theme-text text-darken-3"><b>{{firstName}} Bredberg</b></h1>
                 <h5 class="white-text text-darken-3">Software engineer and full-stack developer </h5>
             </div>
@@ -64,13 +67,12 @@
         
    
         <div class="centered frame single padding-top-frame" >
-            <div #unwatchd></div>
             <div  class="notransition col s12 animated bounceInLeft" style="text-align: center;">
                 <h1 class="yellow-theme-text text-darken-3"><b>unWatchd</b></h1>
             </div>
             <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" >
                 <mat-grid-tile  [colspan]="1" [rowspan]="1">
-                    <div class="centered visible" >
+                    <div #unwatchd class="centered visible" >
                         <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/unwatchd/logoRED.png" class="img-shadow" />
                     </div>
                 </mat-grid-tile>
@@ -169,13 +171,12 @@
     ---------------------------------------------------------------------->
     <div class="centered frame single padding-top-frame" >
 
-        <div #skillmill></div>
         <div class="notransition col s12 animated bounceInLeft" style="text-align: center;">
             <h1 class="yellow-theme-text text-darken-3"><b>SkillMill</b></h1>
         </div>
         <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" rowHeight="">
             <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
-                <div class="centered visible textfield" style="flex-direction: column;">
+                <div #skillmill class="centered visible textfield" style="flex-direction: column;">
                     <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
                         The SkillMill project is an initiative co-funded by the Erasmus+ programme of the European Union. 
                         The primary goal is to provide students who study abroad a way to keep track of the 
@@ -273,18 +274,17 @@
         </div>
 
     <!---------------------------------------------------------------------
-            THIS SITE
+            THIS SITE 
     ---------------------------------------------------------------------->
     
     <div class="centered frame single padding-top-frame" >
 
-        <div #thisite></div>
         <div class="notransition col s12 animated bounceInLeft" style="text-align: center;">
             <h1 class="yellow-theme-text text-darken-3"><b>This site</b></h1>
         </div>
-        <mat-grid-list  cols="2" [class.grid-unwatchd-mobile]="isMobile" [class.grid-thissite]="!isMobile" style="width: 80%;">
+        <mat-grid-list  cols="2" style="width: 80%;" rowHeight="16vh">
             <mat-grid-tile  [colspan]="2" [rowspan]="1  ">
-                <div class="centered visible textfield" style="flex-direction: column;">
+                <div #thissite class="centered visible textfield" style="flex-direction: column;">
                     <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
                         I have also made this website! It is written in angular 13. This website was a project I started
                         with the purpose of teaching myself angular for work. 
@@ -324,25 +324,47 @@
                 </a>
             </mat-grid-tile>
 
-            <mat-grid-tile [colspan]="2" [rowspan]="1" >  
-                <a
-                    style="max-width: 80%; max-height: 20%; height: 5%;"
-                    class="card animated zoomIn faster col s10 offset-s1 m5 l5"
-                    [routerLink]="['/contact', firstName]"
-                    routerLinkActive="active"
-                    >
-                    <div class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3" style="height: 5%;">
-                        <span class="card-title">
-                            <div class="card-title-content" style="height: 5%;">
-                                <h5 class="project-title">Contact</h5>
-                            </div>
-                        </span>
-                    </div>
-                </a>
-            </mat-grid-tile>
             
           </mat-grid-list>
         </div>
+
+        <!---------------------------------------------------------------------
+            THANK YOU FOR VISITING
+        ---------------------------------------------------------------------->
+    
+        <div class="centered frame single padding-top-frame" style="padding-bottom:15rem"> 
+            <div class="notransition col s12 animated bounceInLeft" style="text-align: center;">
+                <h1 class="yellow-theme-text text-darken-3"><b>Thank you for visiting!</b></h1>
+            </div>
+            <mat-grid-list  cols="2" style="width: 80%;" rowHeight="16vh">
+                <mat-grid-tile  [colspan]="2" [rowspan]="1  ">
+                    <div #thissite class="centered visible textfield" style="flex-direction: column;">
+                        <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                            If you would like to get in contact with me, click the button below! 
+                        </h5>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1" >  
+                    <a
+                        style="max-width: 80%; max-height: 20%; height: 5%;"
+                        class="card animated zoomIn faster col s10 offset-s1 m5 l5"
+                        [routerLink]="['/contact', firstName]"
+                        routerLinkActive="active"
+                        >
+                        <div class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3" style="height: 5%;">
+                            <span class="card-title">
+                                <div class="card-title-content" style="height: 5%;">
+                                    <h5 class="project-title">Contact</h5>
+                                </div>
+                            </span>
+                        </div>
+                    </a>
+                </mat-grid-tile>
+                
+              </mat-grid-list>
+
+        </div>
+
 
     </div> <!--WRAPPER-->
 </div><!--CENTERED-->

@@ -42,7 +42,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.gridlist_desired_rowHeight = "30rem"
-    if(window.innerWidth < window.innerHeight){
+    if((window.innerWidth*1.5) < window.innerHeight){
       this.isMobile = true
       this.rowNum = 2
       this.programmingLanguages_columnNum = 4

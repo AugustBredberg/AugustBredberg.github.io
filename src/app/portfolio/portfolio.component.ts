@@ -55,7 +55,7 @@ export class PortfolioComponent implements OnInit {
     // If mobile, use 1 column
     
     this.gridlist_desired_rowHeight = "20rem"
-    if(window.innerWidth < window.innerHeight){
+    if((window.innerWidth*1.5) < window.innerHeight){
       this.columnNumHeader = 1
       this.columnNum = 2
       this.isMobile = true
@@ -81,7 +81,7 @@ export class PortfolioComponent implements OnInit {
     return outlet.activatedRouteData.state;
   }
   scroll(el: HTMLElement) {
-    el.scrollIntoView( {behavior: 'smooth'});
+    el.scrollIntoView( {block: "center", inline: "nearest",behavior: 'smooth'} );
   }
 
   getApiProjects(): Observable<any[]> {
@@ -121,19 +121,16 @@ export class PortfolioComponent implements OnInit {
     // 22:00 - 04:00 -- Fun to see someone here this late! Welcome!
     switch(true){
       case 4 <= thisHour && thisHour < 9 : {
-        return "Good morning! Happy to see someone here this early!"
+        return "Thanks for the early visit, have a good morning and day! "
       }
-      case 9 <= thisHour && thisHour < 11: {
-        return "Good Morning!"
+      case 9 <= thisHour && thisHour < 12: {
+        return "Have a good day!"
       }
-      case 11 <= thisHour && thisHour < 13: {
-        return "Hello there!"
-      }
-      case 13 <= thisHour && thisHour < 17: {
-        return "Good afternoon, hope you've had a good day thus far!"
+      case 12 <= thisHour && thisHour < 17: {
+        return "Have a nice day!"
       }
       case 17 <= thisHour && thisHour < 22: {
-        return "Good evening, have you had a good day?"
+        return "Hope you've had a good day!"
       }
       case 22 <= thisHour || thisHour < 4: {
         return "Fun to see someone here this late! Welcome!"

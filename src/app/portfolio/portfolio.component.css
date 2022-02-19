@@ -106,6 +106,7 @@
   display: block; 
   padding-bottom: 130% !important;
 }
+
 .mat-grid-tile{
     overflow: visible !important;
 }
@@ -150,9 +151,20 @@
   transition-timing-function: ease-out;
   
 }
+
 .center-dot{
   justify-content: center;
   padding: 1rem !important;
+  transform: translateY(15px);
+  transition: 0.4s;
+  transition-timing-function: ease-out;
+}
+.center-dot:hover {
+  transform: scale(1.4); /* (130% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  z-index: 10;
+}
+.rounded{
+  border-radius: 5rem;
 }
 .bullet-point-selected{
   background-color: var(--color-primary);
