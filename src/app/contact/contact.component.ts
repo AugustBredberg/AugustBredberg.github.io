@@ -98,36 +98,8 @@ export class ContactComponent {
     ),
     new Contact('/williambredberg', 'https://github.com/williambredberg', 'github', 'github'),
   ]
-  contactsAlyson = [
-    new Contact(
-      '/august-bredberg',
-      'https://www.linkedin.com/in/august-bredberg/',
-      'linkedin',
-      'linkedin',
-    ),
-    new Contact(
-      'augustbredberg@gmail.com',
-      'mailto:augustbredberg@gmail.com',
-      'email',
-      'envelope',
-    ),
-    new Contact('/augustbredberg', 'https://github.com/AugustBredberg', 'github', 'github'),
-  ]
-  contactsNathanael = [
-    new Contact(
-      '/august-bredberg',
-      'https://www.linkedin.com/in/august-bredberg-1028b0209/',
-      'linkedin',
-      'linkedin',
-    ),
-    new Contact(
-      'augustbredberg@gmail.com',
-      'mailto:augustbredberg@gmail.com',
-      'email',
-      'envelope',
-    ),
-    new Contact('/augustbredberg', 'https://github.com/AugustBredberg', 'github', 'github'),
-  ]
+  contactsAlyson = []
+  contactsNathanael = []
   contactsZacharias = [
     new Contact(
       '',
