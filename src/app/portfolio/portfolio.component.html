@@ -283,7 +283,12 @@
             <h1 class="yellow-theme-text text-darken-3"><b>This site</b></h1>
         </div>
         <mat-grid-list  cols="2" style="width: 80%;" rowHeight="16vh">
-            <mat-grid-tile  [colspan]="2" [rowspan]="1  ">
+            <mat-grid-tile [colspan]="1" [rowspan]="2" >
+                <div class="popup_element visible">
+                    <img style="max-width: 80%; height: auto;" src="favicon.ico" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile  [colspan]="1" [rowspan]="2">
                 <div #thissite class="centered visible textfield" style="flex-direction: column;">
                     <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
                         I have also made this website! It is written in angular 13. This website was a project I started
