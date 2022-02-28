@@ -5,7 +5,7 @@
             <mat-list style="    position: fixed;
             width: 8rem;
             right: 0;
-            top: 30%;"
+            top: 20%;"
             [@inOutAnimation]
              class="" role="list">
 
@@ -21,6 +21,10 @@
                 <mat-list-item class="center-dot" (click)="scroll(thissite)" role="listitem" style="height: 7rem;">
                     <img style="max-width: 120%; height: auto;" src="favicon.ico" class="img-shadow rounded" />
                 </mat-list-item>
+                <mat-list-item class="center-dot" (click)="scroll(vegify)" role="listitem" style="height: 7rem;">
+                    <img style="max-width: 120%; height: auto;" src="assets/portfolioAugust/vegify/vegify_logo2.png" class="img-shadow rounded" />
+                </mat-list-item>
+
             </mat-list>
         </div>
         
@@ -325,6 +329,120 @@
                         </div>
                     </span>
                     <p class="project-description white-text flow-text">The code behind this website! This link leads to Github.com</p>
+                    </div>
+                </a>
+            </mat-grid-tile>
+
+            
+          </mat-grid-list>
+        </div>
+
+
+
+    <!---------------------------------------------------------------------
+            Vegify 
+    ---------------------------------------------------------------------->
+    
+    <div class="centered frame single padding-top-frame" >
+
+        <div class="notransition col s12 animated bounceInLeft" style="text-align: center;">
+            <h1 class="yellow-theme-text text-darken-3"><b>Vegify</b></h1>
+        </div>
+        <mat-grid-list  cols="{{columnNumHeader}}" [class.grid-unwatchd-mobile]="isMobile" [class.grid-unwatchd]="!isMobile" rowHeight="">
+            <mat-grid-tile  [colspan]="1" [rowspan]="1  ">
+                <div #skillmill class="centered visible textfield" style="flex-direction: column;">
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                        A project with friends. In this project I created the server, the REST API and tended to the MongoDB database . 
+                        When the client scans a barcode an endpoint in the REST API is called and all relevant information about that product 
+                        is neatly given to the client. We gave the Vegify app three independent 
+                        information sources to ensure the client is given reliable information. 
+                    </h5>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile  [colspan]="1" [rowspan]="1">
+                <div #vegify class="centered visible" >
+                    <img style="max-width: 70%; height: auto;" src="assets/portfolioAugust/vegify/vegify_logo2.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <mat-grid-list  [class.grid-skillmill-mobile]="isMobile" [class.grid-skillmill]="!isMobile" cols="{{columnNum}}">
+            
+
+            <mat-grid-tile  [colspan]="1" [rowspan]="2">
+                <div class="popup_element visible">
+                    <img style="max-width: 90%; height: auto;" src="assets/portfolioAugust/skillmill/skillmill_login.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile *ngIf=isMobile [colspan]="1" [rowspan]="2" >
+                <div class="popup_element visible">
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/skillmill/skillmill_emojis.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2" [rowspan]="1" >
+                <div class="centered visible textfield" style="flex-direction: column;">
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                        Find out if a product is suitable for you in an instant. By simply scanning the barcode of a 
+                        product you can get all the relevant information you need in a fraction of a second.
+                    </h5>
+                </div>
+            </mat-grid-tile>    
+            <mat-grid-tile  [colspan]="1" [rowspan]="2">
+                <div class="popup_element visible">
+                    <img [ngStyle]="{'max-width': isMobile === true ? '90%' : '120%' ,
+                        'width': isMobile === true ? '16rem' : '20rem'
+                    }"
+                    style="height: auto;" src="assets/portfolioAugust/skillmill/skillmill.gif" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="2" >
+                <div class="popup_element visible">
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/skillmill/skillmill_success.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile *ngIf=!isMobile [colspan]="1" [rowspan]="2" >
+                <div class="popup_element visible">
+                    <img style="max-width: 80%; height: auto;" src="assets/portfolioAugust/skillmill/skillmill_emojis.png" class="img-shadow" />
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2" [rowspan]="1" >
+                <div class="centered visible textfield" style="flex-direction: column;">
+                    <h5 class="white-text text-darken-3" [ngStyle]="{'font-size': isMobile === true ? '1.1em' : '1.64em' }">
+                        Me and my team provided the SkillMill project with a mobile application in which the target group, students, can keep a 
+                        journal about transformative experiences. The created mobile application serves as a foundation for the 
+                        SkillMill project to build upon further to allow users to identify, understand and verbalize their professional competencies
+                    </h5>
+                </div>
+            </mat-grid-tile>
+
+            
+            <mat-grid-tile [colspan]="2" [rowspan]="1" >
+                <a
+                    style="max-width: 80%;"
+                    class="card animated zoomIn faster col s10 offset-s1 m5 l5"
+                    href=""
+                    target="_blank"
+                    >
+                    <div
+                    class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3"
+                    >
+                    <span class="card-title">
+                        <div class="card-title-content">
+                        <h5 class="project-title">This website!</h5>
+                        <span
+                            class="
+                            new
+                            badge
+                            secondary-color
+                            darken-3
+                            white-text
+                            hide-on-med-and-down
+                            "
+                            ><i class="fa fa-terminal" aria-hidden="true"></i
+                            >Angular</span
+                        >
+                        </div>
+                    </span>
+                    <p class="project-description white-text flow-text">The code behind Vegify! This link leads to Github.com</p>
                     </div>
                 </a>
             </mat-grid-tile>
