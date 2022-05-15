@@ -42,7 +42,7 @@
     transform: translateY(0);
 }
 .popup_element img, .popup_element video {
-    transition: 1s;
+    transition: 0.3s;
 }
 .popup_element {
     opacity: 0;
@@ -53,7 +53,7 @@
     display: flex;
 }
 .popup_element:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.55); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     z-index: 10;
 }
 .padding-top-frame{

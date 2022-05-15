@@ -11,14 +11,7 @@ export class AboutService {
       'https://www.saljpoolen.se/sv',
     ),
   ]
-  worksWilliam: InfoField[] = [
-    new InfoField(
-      '',
-      '',
-      '',
-      '',
-    ),
-  ]
+  worksWilliam: InfoField[] = [new InfoField('', '', '', '')]
 
   educationWilliam: InfoField[] = [
     new InfoField(
@@ -30,7 +23,7 @@ export class AboutService {
   ]
   educationAlyson: InfoField[] = [
     new InfoField(
-      "Bachelor of Science Program, Chemistry",
+      'Bachelor of Science Program, Chemistry',
       'Lunds Tekniska Högskola',
       'Aug 2021 -',
       '',
@@ -55,22 +48,20 @@ export class AboutService {
     new InfoField('Swedish', 'Bilingual or native competence', ' ', ' '),
     new InfoField('English', 'Bilingual or native competence', ' ', ' '),
   ]
-  languagesWilliam: InfoField[] = [
-    new InfoField('', '', ' ', ' '),
-  ]
+  languagesWilliam: InfoField[] = [new InfoField('', '', ' ', ' ')]
 
   getEducation(firstName): InfoField[] {
-    switch(firstName){
-      case "August": {
+    switch (firstName) {
+      case 'August': {
         return this.educationAugust
       }
-      case "William": {
+      case 'William': {
         return this.educationWilliam
       }
-      case "Alyson": {
+      case 'Alyson': {
         return this.educationAlyson
       }
-      case "Zacharias": {
+      case 'Zacharias': {
         return this.educationWilliam
       }
       default: {
@@ -80,17 +71,17 @@ export class AboutService {
   }
 
   getWorks(firstName): InfoField[] {
-    switch(firstName){
-      case "August": {
+    switch (firstName) {
+      case 'August': {
         return this.worksAugust
       }
-      case "William": {
+      case 'William': {
         return this.worksWilliam
       }
-      case "Alyson": {
+      case 'Alyson': {
         return this.worksWilliam
       }
-      case "Zacharias": {
+      case 'Zacharias': {
         return this.worksWilliam
       }
       default: {
@@ -100,17 +91,17 @@ export class AboutService {
   }
 
   getLanguages(firstName): InfoField[] {
-    switch(firstName){
-      case "August": {
+    switch (firstName) {
+      case 'August': {
         return this.languagesAugust
       }
-      case "William": {
+      case 'William': {
         return this.languagesWilliam
       }
-      case "Alyson": {
+      case 'Alyson': {
         return this.languagesWilliam
       }
-      case "Zacharias": {
+      case 'Zacharias': {
         return this.languagesWilliam
       }
       default: {
@@ -119,18 +110,47 @@ export class AboutService {
     }
   }
 
-  getProgrammingLanguages(firstName): string[]{
-    switch(firstName){
-      case "August": {
-        return ["Java", "SQL", "JavaScript", "TypeScript", "ASP. NET", "C#", "Angular", "HTML/CSS", "Python", "Flutter", "Dart", "C++", "C", "Haskell", "GitHub", "GitLab", "Scrum", "Kanban", "CI/CD", "Matlab", "REST API", "NodeJS"]
+  getProgrammingLanguages(firstName): string[] {
+    switch (firstName) {
+      case 'August': {
+        return [
+          'Java',
+          'SQL',
+          'JavaScript',
+          'TypeScript',
+          'ASP. NET',
+          'C#',
+          'Angular',
+          'HTML/CSS',
+          'Python',
+          'Flutter',
+          'Dart',
+          'C++',
+          'C',
+          'Haskell',
+          'GitHub',
+          'GitLab',
+          'Scrum',
+          'Kanban',
+          'CI/CD',
+          'Matlab',
+          'REST API',
+          'NodeJS',
+          'Micro-frontends',
+          'Azure',
+          'Firestore',
+          'Firebase-auth',
+          'Firebase-functions',
+          'React-native',
+        ]
       }
-      case "William": {
+      case 'William': {
         return []
       }
-      case "Alyson": {
+      case 'Alyson': {
         return []
       }
-      case "Zacharias": {
+      case 'Zacharias': {
         return []
       }
       default: {

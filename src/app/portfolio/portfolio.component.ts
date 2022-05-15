@@ -55,7 +55,7 @@ export class PortfolioComponent implements OnInit {
     // If mobile, use 1 column
     
     this.gridlist_desired_rowHeight = "20rem"
-    if((window.innerWidth*1.5) < window.innerHeight){
+    if((window.innerWidth*0.85) < window.innerHeight){
       this.columnNumHeader = 1
       this.columnNum = 2
       this.isMobile = true

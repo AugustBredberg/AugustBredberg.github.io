@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
   bottom: 20px;
   width: 38px;
   height: 44px;
-  background: url("../img/cd-arrow-bottom.svg") no-repeat center center;
+  background: url("./assets/portfolioAugust/arrowdown2.gif") no-repeat center center;
 }
 
 /* No Touch devices */
@@ -142,7 +142,6 @@ body::-webkit-scrollbar {
   clear: both;
 }
 .no-touch #cd-vertical-nav a span {
-  float: right;
   display: inline-block;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
