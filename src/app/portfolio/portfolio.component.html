@@ -650,9 +650,7 @@
                 width: isMobile === true ? '16rem' : '20rem'
               }"
               style="height: auto"
-              preload="auto"
-              crossorigin
-              autoplay
+              loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"
               src="assets/portfolioAugust/vegify/video.mp4"
               class="img-shadow"
             ></video>
@@ -802,9 +800,7 @@
                 width: isMobile === true ? '16rem' : '20rem'
               }"
               style="height: auto"
-              preload="auto"
-              crossorigin
-              autoplay
+              loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"
               src="assets/portfolioAugust/plainsight/starterCategories.mp4"
               class="img-shadow"
             ></video>
@@ -837,7 +833,7 @@
                 width: isMobile === true ? '16rem' : '20rem'
               }"
               style="height: auto"
-              autoplay
+              loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"
               src="assets/portfolioAugust/plainsight/homepage.mp4"
               class="img-shadow"
             ></video>
