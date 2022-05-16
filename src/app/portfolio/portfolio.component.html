@@ -704,12 +704,10 @@
                 'font-size': isMobile === true ? 'small' : 'larger'
               }"
             >
-              Me and my team provided the SkillMill project with a mobile
-              application in which the target group, students, can keep a
-              journal about transformative experiences. The created mobile
-              application serves as a foundation for the SkillMill project to
-              build upon further to allow users to identify, understand and
-              verbalize their professional competencies
+              This project allowed me to get comfortable using mongoDB, learn
+              how to efficiently cache frequently accessed data, design a
+              scalable server architecture and explore solutions for
+              categorizing searchable and filterable items.
             </h5>
           </div>
         </mat-grid-tile>
@@ -718,7 +716,7 @@
           <a
             style="max-width: 77%"
             class="card animated zoomIn faster col s10 offset-s1 m5 l5"
-            href=""
+            href="https://github.com/PSS-UU/vegify-2"
             target="_blank"
           >
             <div
@@ -726,11 +724,11 @@
             >
               <span class="card-title">
                 <div class="card-title-content">
-                  <h5 class="project-title">This website!</h5>
+                  <h5 class="project-title">Vegify</h5>
                   <span
                     class="new badge secondary-color darken-3 white-text hide-on-med-and-down"
-                    ><i class="fa fa-terminal" aria-hidden="true"></i
-                    >Angular</span
+                    ><i class="fa fa-terminal" aria-hidden="true"></i>Node
+                    JS</span
                   >
                 </div>
               </span>
@@ -772,12 +770,12 @@
                 'font-size': isMobile === true ? 'small' : 'larger'
               }"
             >
-              One of my proudest achievements thus far. A comprehensive app and system
-              that me and my two friends Erik Junghahn and Robert Paananen designed together.
-              <br>
-              <br>
-              test
-
+              One of my proudest achievements thus far. A comprehensive app and
+              system that me and my two friends Erik Junghahn and Robert
+              Paananen designed together.
+              <br />
+              <br />
+              I've designed the backend architecture and the API endpoints. 
             </h5>
           </div>
         </mat-grid-tile>
@@ -798,20 +796,18 @@
       >
         <mat-grid-tile [colspan]="1" [rowspan]="2">
           <div class="popup_element visible">
-            <img
-              style="max-width: 77%; height: auto"
-              src="assets/portfolioAugust/vegify/scan.png"
+            <video
+              [ngStyle]="{
+                'max-width': isMobile === true ? '80%' : '110%',
+                width: isMobile === true ? '16rem' : '20rem'
+              }"
+              style="height: auto"
+              preload="auto"
+              crossorigin
+              autoplay
+              src="assets/portfolioAugust/plainsight/starterCategories.mp4"
               class="img-shadow"
-            />
-          </div>
-        </mat-grid-tile>
-        <mat-grid-tile *ngIf="isMobile" [colspan]="1" [rowspan]="2">
-          <div class="popup_element visible">
-            <img
-              style="max-width: 77%; height: auto"
-              src="assets/portfolioAugust/vegify/scan_result.png"
-              class="img-shadow"
-            />
+            ></video>
           </div>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="1" [rowspan]="1">
@@ -825,19 +821,12 @@
                 'font-size': isMobile === true ? 'small' : 'larger'
               }"
             >
-              Find out if a product is suitable for you in an instant. By simply
-              scanning the barcode of a product you can get all the relevant
-              information you need in a fraction of a second.
+              Plain Sight offers its users the unfiltered truth about what
+              people near you think about certain topics, completely anonymous.
+              From movies to favorite foods. From countries to conspiracy
+              theories, users can find out the common opinion on anything
+              they’re curious about.
             </h5>
-          </div>
-        </mat-grid-tile>
-        <mat-grid-tile *ngIf="!isMobile" [colspan]="1" [rowspan]="2">
-          <div class="popup_element visible">
-            <img
-              style="max-width: 77%; height: auto"
-              src="assets/portfolioAugust/vegify/scan_result.png"
-              class="img-shadow"
-            />
           </div>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="1" [rowspan]="2">
@@ -848,49 +837,13 @@
                 width: isMobile === true ? '16rem' : '20rem'
               }"
               style="height: auto"
-              preload="auto"
-              crossorigin
               autoplay
-              src="assets/portfolioAugust/vegify/video.mp4"
+              src="assets/portfolioAugust/plainsight/homepage.mp4"
               class="img-shadow"
             ></video>
           </div>
         </mat-grid-tile>
-        <mat-grid-tile [colspan]="1" [rowspan]="2">
-          <div class="popup_element visible">
-            <img
-              style="max-width: 77%; height: auto"
-              src="assets/portfolioAugust/vegify/search_recipe.png"
-              class="img-shadow"
-            />
-          </div>
-        </mat-grid-tile>
-        <mat-grid-tile *ngIf="!isMobile" [colspan]="1" [rowspan]="2">
-          <div class="popup_element visible">
-            <img
-              style="max-width: 77%; height: auto"
-              src="assets/portfolioAugust/vegify/rate_recipe.png"
-              class="img-shadow"
-            />
-          </div>
-        </mat-grid-tile>
-        <mat-grid-tile [colspan]="1" [rowspan]="1">
-          <div
-            class="centered visible textfield"
-            style="flex-direction: column"
-          >
-            <h5
-              class="white-text text-darken-3"
-              [ngStyle]="{
-                'font-size': isMobile === true ? 'small' : 'larger'
-              }"
-            >
-              Fast and reliable allergen information through three independent
-              food-allergen API's and a caching mechanism on both the client and
-              the server side.
-            </h5>
-          </div>
-        </mat-grid-tile>
+        
         <mat-grid-tile [colspan]="2" [rowspan]="1">
           <div
             class="centered visible textfield"
@@ -902,38 +855,36 @@
                 'font-size': isMobile === true ? 'small' : 'larger'
               }"
             >
-              Me and my team provided the SkillMill project with a mobile
-              application in which the target group, students, can keep a
-              journal about transformative experiences. The created mobile
-              application serves as a foundation for the SkillMill project to
-              build upon further to allow users to identify, understand and
-              verbalize their professional competencies
+              If you wish to find out what your neighbors think of Star Wars,
+              you’ll have to share your own opinion by sliding the
+              identify-slider to where you’re comfortable. Your neighbors or
+              just people living in the same city as you will then be able to
+              view the opinion and compare it with the opinions in different
+              cities, countries and time periods as they please.
             </h5>
           </div>
         </mat-grid-tile>
-
         <mat-grid-tile [colspan]="2" [rowspan]="1">
           <a
             style="max-width: 77%"
             class="card animated zoomIn faster col s10 offset-s1 m5 l5"
-            href=""
-            target="_blank"
           >
             <div
               class="card-content secondary-color lighten-5 yellow-theme-text text-darken-3"
             >
               <span class="card-title">
                 <div class="card-title-content">
-                  <h5 class="project-title">This website!</h5>
+                  <h5 class="project-title">PlainSight</h5>
                   <span
                     class="new badge secondary-color darken-3 white-text hide-on-med-and-down"
                     ><i class="fa fa-terminal" aria-hidden="true"></i
-                    >Angular</span
+                    >React-Native</span
                   >
                 </div>
               </span>
               <p class="project-description white-text flow-text">
-                The code behind Vegify! This link leads to Github.com
+                This app is in development, its codebase is not public. This
+                button does nothing :)
               </p>
             </div>
           </a>
